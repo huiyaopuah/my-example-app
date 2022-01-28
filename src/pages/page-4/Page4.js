@@ -1,9 +1,9 @@
 import { Card } from 'antd';
 import React, { useEffect, useState } from 'react';
 
-export default function Dashboard() {
+export default function Page4() {
     const [isLoading, setIsLoading] = useState(false);
-
+    
     useEffect(() => {
         
     }, [])
@@ -12,7 +12,7 @@ export default function Dashboard() {
         <Card
             align="center"
         >
-            Dashboard
+            Page 4
         </Card>
     );
 }

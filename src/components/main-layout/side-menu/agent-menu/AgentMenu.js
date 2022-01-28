@@ -1,5 +1,5 @@
 import { DashboardOutlined, ExportOutlined, ImportOutlined, TransactionOutlined } from "@ant-design/icons";
-import { Menu } from "antd";
+import { Col, Menu, Row } from "antd";
 import { useHistory } from "react-router-dom";
 import "../Style.scss";
 
@@ -14,8 +14,11 @@ export default function AgentMenu(props) {
 			case "/dashboard":
 				history.push("/dashboard");
 				break;
-			case "/transaction/pending":
-				history.push("/transaction/pending");
+			case "/page-1":
+				history.push("/page-1");
+				break;
+			case "/page-2":
+				history.push("/page-2");
 				break;
 			default:
 				history.push("/dashboard");
@@ -24,27 +27,31 @@ export default function AgentMenu(props) {
 
     return (
         <div className="main-menu-scroll">
-			<a href="/dashboard">
-				{collapsed === true ? (
-					<div className="menu-logo-small" />
-				) : (
-					<div className="menu-logo" />
-				)}
-			</a>
+			<Row justify="center" align="middle" >
+				<Col>
+					{
+						collapsed ? (
+							<div style={{ padding: 30 }} />
+						) : (
+							<div style={{ padding: 30 }} />
+						)
+					}
+				</Col>
+			</Row>
 			<Menu
 				mode="inline"
 				theme='dark'
 				onClick={handleSiderMenuClick}
 			>
-				<Menu.Item key="menu-1">
+				<Menu.Item key="/dashboard">
 					<DashboardOutlined />
 					<span className="nav-text">
-                        Menu 1
+                        Dashboard
 					</span>
 				</Menu.Item>
 
 				<SubMenu
-					key="sub-menu-1"
+					key="/sub-menu-1"
 					title={
 						<span>
 							<TransactionOutlined />
@@ -53,19 +60,19 @@ export default function AgentMenu(props) {
 					}
 				>
 					<Menu.Item
-						key="sub-menu-1-1"
+						key="/page-1"
 						icon={<ImportOutlined />}
 					>
 						<span className="nav-text">
-                            Sub Menu 1-1
+                            Page 1
 						</span>
 					</Menu.Item>
 					<Menu.Item
-						key="sub-menu-1-2"
+						key="/page-2"
 						icon={<ExportOutlined />}
 					>
 						<span className="nav-text">
-                            Sub Menu 1-2
+                            Page 2
 						</span>
 					</Menu.Item>
 				</SubMenu>

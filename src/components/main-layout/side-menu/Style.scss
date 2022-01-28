@@ -2,15 +2,15 @@
     overflow-y: hidden;
     z-index: auto;
 
-    // ::-webkit-scrollbar {
-    //     width: 5px;
-    // }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
 
-    // ::-webkit-scrollbar-thumb
-    // {
-    //     background-color: #555555;
-    //     border: 2px solid #555555;
-    // }
+    ::-webkit-scrollbar-thumb
+    {
+        background-color: #555555;
+        border: 2px solid #555555;
+    }
 }
 
 .main-menu-scroll {

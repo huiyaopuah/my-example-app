@@ -4,7 +4,7 @@ import AdminMenu from '../components/main-layout/side-menu/admin-menu/AdminMenu'
 import AgentMenu from '../components/main-layout/side-menu/agent-menu/AgentMenu';
 import { AuthContext } from '../context/AuthContext';
 
-function RoleCheck(collapsed) {
+export default function RoleCheck(collapsed) {
   const { role } = useContext(AuthContext);
 
   function renderMenu() {
@@ -17,4 +17,3 @@ function RoleCheck(collapsed) {
   
   return (renderMenu());
 }
-export default RoleCheck;

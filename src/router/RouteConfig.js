@@ -5,7 +5,7 @@ import Error403 from '../pages/other/error-403/Error403';
 import Error404 from '../pages/other/error-404/Error404';
 import routes from './RouteList';
 
-function RouteConfig() {
+export default function RouteConfig() {
     const location = useLocation();
     const { role } = useContext(AuthContext);
   
@@ -71,5 +71,3 @@ function RouteConfig() {
       }
     } 
   }
-  
-  export default RouteConfig;
