@@ -80,9 +80,9 @@ const routes = [
 ];
 
 export default function RoutingList() {
-  const { isLogin } = useContext(AuthContext);
+  const { isLogin, cookies } = useContext(AuthContext);
 
-  if (isLogin === false) {
+  if (!isLogin || cookies.username === undefined) {
     return <Redirect to='/login' />
   }
 

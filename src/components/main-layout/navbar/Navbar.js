@@ -60,7 +60,7 @@ export default function Navbar(props) {
                 </Col>
 				<Col>
                     <Menu mode="horizontal" onClick={(action) => handleSettingMenuClick(action)}>
-                        <SubMenu title={<MenuOutlined />}>
+                        <SubMenu key="/setting-menu" title={<MenuOutlined />}>
                             <Menu.ItemGroup 
                                 title={
                                     <Row gutter={16} justify="start" align="middle">
